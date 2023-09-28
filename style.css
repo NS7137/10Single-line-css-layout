@@ -1,0 +1,265 @@
+body {
+  font-family: system-ui, serif;
+}
+
+.blue {
+  background: lightblue;
+}
+
+.coral {
+  background: lightcoral;
+}
+
+.white {
+  background: whitesmoke;
+}
+
+.green {
+  background: lightgreen;
+}
+
+.yellow {
+  background: lightyellow;
+}
+
+.purple {
+  background: mediumpurple;
+}
+
+.pink {
+  background: lightpink;
+}
+
+/* ============================================== */
+
+.ex1 .parent {
+  display: grid;
+  place-items: center;
+
+  width: 500px;
+  height: 500px;
+
+  resize: both;
+  overflow: auto;
+}
+
+.ex1 .child {
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ============================================== */
+
+.ex2 .parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.ex2 .box {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+  /*  No stretching: */
+  flex: 0 1 300px;
+  /*  Stretching: */
+  /* flex: 1 1 300px; */
+  font-size: 2rem;
+  border-radius: 1rem;
+  border-style: dashed;
+  margin: 5px;
+}
+
+/* ============================================== */
+
+.ex3 .sidebar {
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+
+  height: 100vh;
+
+  font-size: 2rem;
+  text-align: center;
+}
+
+.ex3 .content {
+  padding: 2rem;
+}
+
+/* ============================================== */
+
+.ex4 .parent {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: 50px auto;
+}
+
+header,
+main,
+footer {
+  padding: 2rem;
+}
+
+/* ============================================== */
+
+.ex5 .parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  height: 100vh;
+  margin: 50px auto;
+}
+
+.ex5 header {
+  padding: 2rem;
+  grid-column: 1 / 4;
+}
+
+.ex5 .left-side {
+  grid-column: 1 / 2;
+  padding: 1rem;
+}
+
+.ex5 main {
+  grid-column: 2 / 3;
+}
+
+.ex5 .right-side {
+  grid-column: 3 / 4;
+  padding: 1rem;
+}
+
+.ex5 footer {
+  grid-column: 1 / 4;
+  text-align: center;
+}
+
+/* ============================================== */
+
+.ex6 .parent {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100vh;
+  margin: 50px auto;
+}
+
+.ex6 .span-12 {
+  grid-column: 1 / span 12;
+}
+
+.ex6 .span-6 {
+  grid-column: 1 / span 6;
+}
+
+.ex6 .span-4 {
+  grid-column: 4 / span 4;
+}
+
+.ex6 .span-2 {
+  grid-column: 3 / span 2;
+}
+
+/* centering text */
+.ex6 .section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* ============================================== */
+
+.ex7 .parent {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  height: 50vh;
+  margin: 50px auto;
+}
+
+.ex7 .box {
+  display: grid;
+  place-items: center;
+}
+
+/* ============================================== */
+
+.ex8 .parent {
+  height: auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ex8 .visual {
+  height: 100px;
+  width: 100%;
+}
+
+.ex8 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.ex8 h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* ============================================== */
+
+.ex9 .parent {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.ex9 .card {
+  width: clamp(23ch, 50%, 46ch);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.ex9 .visual {
+  height: 125px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.ex9 h1 {
+  font-size: 1.5rem;
+}
+
+/* ============================================== */
+
+.ex10 .parent {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.ex10 .visual {
+  aspect-ratio: 16 / 9;
+  margin: 0.5rem 0;
+}
+
+.ex10 .card {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.ex10 h1 {
+  font-size: 1.5rem;
+}

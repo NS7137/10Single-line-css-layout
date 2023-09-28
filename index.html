@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 single line layout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 01. Super Centered
+      place-items: center -->
+
+    <div class="ex1">
+      <div class="parent blue">
+        <div class="child coral" contenteditable>:)</div>
+      </div>
+    </div>
+
+    <!-- 02. The Deconstructed Pancake: flex: <grow> <shrink> <baseWidth> -->
+
+    <div class="ex2">
+      <div class="parent white">
+        <div class="box green">1</div>
+        <div class="box green">2</div>
+        <div class="box green">3</div>
+      </div>
+    </div>
+
+    <!-- 03. Sidebar Says
+      grid-template-columns: minmax(<min>, <max>) ... -->
+
+    <div class="ex3">
+      <div class="sidebar">
+        <div class="content yellow" contenteditable>Min: 150px / Max: 25%</div>
+        <div class="content purple" contenteditable>
+          This element takes the second grid position (1fr), meaning it takes up
+          the rest of the remaining space.
+        </div>
+      </div>
+    </div>
+
+    <!-- 04. Pancake Stack
+        grid-template-rows: auto 1fr auto -->
+
+    <div class="ex4">
+      <div class="parent">
+        <header class="blue section" contenteditable>Header</header>
+        <main class="coral section" contenteditable>Main</main>
+        <footer class="purple section" contenteditable>Footer Content</footer>
+      </div>
+    </div>
+
+    <!-- 05. Classic Holy Grail Layout
+        grid-template: auto 1fr auto / auto 1fr auto -->
+
+    <div class="ex5">
+      <div class="parent">
+        <header class="pink section">Header</header>
+        <div class="left-side blue section" contenteditable>Left Sidebar</div>
+        <main class="section coral" contenteditable>Main Content</main>
+        <div class="right-side yellow section" contenteditable>
+          Right Sidebar
+        </div>
+        <footer class="green section">Footer</footer>
+      </div>
+    </div>
+
+    <!-- 06. 12-Span Grid
+        grid-template-columns: repeat(12, 1fr) -->
+
+    <div class="ex6">
+      <div class="parent white">
+        <div class="span-12 pink section">Span 12</div>
+        <div class="span-6 coral section">Span 6</div>
+        <div class="span-4 blue section">Span 4</div>
+        <div class="span-2 yellow section">Span 2</div>
+      </div>
+    </div>
+
+    <!-- 07. RAM (Repeat, Auto, Minmax)
+        grid-template-columns: repeat(auto-fit, minmax(<base>, 1fr)) -->
+
+    <div class="ex7">
+      <div class="parent white">
+        <div class="box pink">1</div>
+        <div class="box purple">2</div>
+        <div class="box blue">3</div>
+        <div class="box green">4</div>
+      </div>
+    </div>
+
+    <!-- 08. Line Up
+        justify-content: space-between -->
+
+    <div class="ex8">
+      <div class="parent white">
+        <div class="card yellow">
+          <h3>Title - Card 1</h3>
+          <p contenteditable>
+            Medium length description with a few more words here.
+          </p>
+          <div class="visual pink"></div>
+        </div>
+        <div class="card yellow">
+          <h3>Title - Card 2</h3>
+          <p contenteditable>
+            Long Description. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit.
+          </p>
+          <div class="visual blue"></div>
+        </div>
+        <div class="card yellow">
+          <h3>Title - Card 3</h3>
+          <p contenteditable>Short Description.</p>
+          <div class="visual green"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09. Clamping My Style
+        clamp(<min>, <actual>, <max>) -->
+
+    <div class="ex9">
+      <div class="parent white">
+        <div class="card purple">
+          <h1>Title Here</h1>
+          <div class="visual yellow"></div>
+          <p>
+            Descriptive Text. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Sed est error repellat veritatis.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Respect for Aspect
+        aspect-ratio: <width> / <height> -->
+
+    <div class="ex10">
+      <div class="parent white">
+        <div class="card blue">
+          <h1>Video Title</h1>
+          <div class="visual green"></div>
+          <p>Descriptive text for aspect ratio card demo.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
